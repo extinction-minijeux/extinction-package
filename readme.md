@@ -1,6 +1,6 @@
 ## Extinction MiniJeux - Package
 
-![Node.js CI](https://github.com/extinction-minijeux/extinction-package/workflows/Node.js%20CI/badge.svg?branch=master)
+[![Node.js CI](https://github.com/extinction-minijeux/extinction-package/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/extinction-minijeux/extinction-package/actions)
 
 **Téléchargement**  
 - Directement sur nos [releases github](https://github.com/extinction-minijeux/extinction-package/releases)
