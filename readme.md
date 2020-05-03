@@ -1,10 +1,16 @@
 ## Extinction MiniJeux - Package
 
+![Node.js CI](https://github.com/extinction-minijeux/extinction-package/workflows/Node.js%20CI/badge.svg?branch=master)
+
+**Téléchargement**  
+- Directement sur nos [releases github](https://github.com/extinction-minijeux/extinction-package/releases)
+- Sur notre projet [sourceforge](https://sourceforge.net/projects/extinction-minijeux/files/)
+
 **Compilation**  
 *Le projet utilise [electron](https://www.electronjs.org/) et [electron-forge](https://www.electronforge.io/) ainsi que le plugin [PepperFlashPlugin](https://www.electronjs.org/docs/tutorial/using-pepper-flash-plugin)*   
 
 Le code source principal se trouve dans `src/index.js` et plus exactement le bout de code suivant : `mainWindow.loadURL("https://www.extinction-minijeux.fr/executable.html");`  
-Electron nous permet alors d'embarquer un "mini-navigateur" avec le plugin flash et de charger la version navigateur sur un installateur pour Windows et Mac (ce qui explique donc qu'il fasse environ 70Mo)
+Electron nous permet alors d'embarquer un "mini-navigateur" avec le plugin flash et de charger la version navigateur sur un installateur pour Windows et Mac (ce qui explique donc qu'il fasse environ 70Mo).
 
 Pour compiler, il suffit de cloner le repo, faire un `npm install` puis `npm start` pour démarrer en temps réel ou `npm make` pour compiler (cela compilera en fonction du `package.json` et de votre machine).
 
@@ -21,7 +27,7 @@ Par mail : contact@extinction-minijeux.fr
 GNU GPL V3.0 - Disponible sur notre [github](https://github.com/extinction-minijeux/extinction-package/blob/master/LICENSE)
 
 ## Extinction MiniJeux - Release notes
-**V1.0.0 - 03/05/2020** (même version que précédent car non déployée encore, les futures versions seront incrémentales)  
+**V1.0.0 - 03/05/2020** (les futures versions seront incrémentales)  
 - Ajout de l'option Zoom qui permet de retrouver le `100%` et `Afficher tout` de Flash
 - Publication du code source et création du projet sur Sourceforge
 
