@@ -1,0 +1,52 @@
+{
+  "name": "Extinction-MiniJeux",
+  "productName": "Extinction-MiniJeux",
+  "version": "1.0.0",
+  "description": "Extinction-MiniJeux.fr",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Extinction-MiniJeux",
+    "email": "contact@extinction-minijeux.fr"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "MiniJeux",
+        "icon": "icon_full.ico",
+        "platform": [
+          "win32"
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "extinction_minijeux",
+            "iconUrl": "https://www.extinction-minijeux.fr/icon_full.ico",
+            "setupIcon": "icon_full.ico"
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.51",
+    "@electron-forge/maker-deb": "^6.0.0-beta.51",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.51",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.51",
+    "@electron-forge/maker-zip": "^6.0.0-beta.51",
+    "electron": "8.2.5"
+  }
+}
