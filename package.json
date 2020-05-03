@@ -23,7 +23,8 @@
         "name": "MiniJeux",
         "icon": "icon_full.ico",
         "platform": [
-          "win32"
+          "win32",
+          "darwin"
         ]
       },
       "makers": [
@@ -33,6 +34,13 @@
             "name": "extinction_minijeux",
             "iconUrl": "https://www.extinction-minijeux.fr/icon_full.ico",
             "setupIcon": "icon_full.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "icon": "icon_full.icns",
+            "format": "ULFO"
           }
         }
       ]
@@ -44,6 +52,7 @@
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.51",
     "@electron-forge/maker-deb": "^6.0.0-beta.51",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.51",
     "@electron-forge/maker-rpm": "^6.0.0-beta.51",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.51",
     "@electron-forge/maker-zip": "^6.0.0-beta.51",
