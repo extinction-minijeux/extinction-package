@@ -44,11 +44,7 @@
           }
         },
         {
-          "name": "@electron-forge/maker-zip",
-          "config": {
-            "icon": "icon_full.icns",
-            "format": "ULF0"
-          }
+          "name": "@electron-forge/maker-zip"
         }
       ]
     }
