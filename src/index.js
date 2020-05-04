@@ -66,6 +66,7 @@ if(process.platform  == 'win32'){
   ppapi_flash_path = path.join(__dirname, 'pepflashplayer.dll');
 } else if (process.platform == 'linux') {
   ppapi_flash_path = path.join(__dirname, 'libpepflashplayer.so');
+  app.commandLine.appendSwitch('no-sandbox');
 } else if (process.platform == 'darwin') {
   ppapi_flash_path = app.getPath('pepperFlashSystemPlugin');
 }

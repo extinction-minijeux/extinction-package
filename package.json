@@ -42,6 +42,9 @@
             "icon": "icon_full.icns",
             "format": "ULFO"
           }
+        },
+        {
+          "name": "@electron-forge/maker-zip"
         }
       ]
     }
