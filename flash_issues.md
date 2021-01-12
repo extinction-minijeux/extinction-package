@@ -24,6 +24,8 @@ AllowListUrlPattern=xmlsocket://178.33.183.149:5555
 AllowListRootMovieOnly=1
 ```
 
+Vous pouvez trouver le fichier ici (le télécharger et le glisser/déposer dans le bon dossier) : https://github.com/extinction-minijeux/extinction-package/blob/master/mms.cfg
+
 Exemple de chemin complet vers le fichier sur Windows : `C:\Users\<user>\AppData\Roaming\Extinction-MiniJeux\Pepper Data\Shockwave Flash\System\mms.cfg`
 
 Vous l'aurez remarqué ce ficher de configuration permet d'autoriser une liste de domaines, ip, adresses à exécuter Flash Player sur votre ordinateur (ici on autorise extinction-minijeux.fr et notre serveur de jeu).
