@@ -1,7 +1,7 @@
 {
   "name": "Extinction-MiniJeux",
   "productName": "Extinction-MiniJeux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extinction-MiniJeux.fr",
   "main": "src/index.js",
   "scripts": {
