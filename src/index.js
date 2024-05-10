@@ -1,7 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   return app.quit();
@@ -14,14 +13,14 @@ const createWindow = () => {
     'height': 660,
     'webPreferences': {
       'plugins': true,
-      'nodeIntegration': true
+      'nodeIntegration': false
     },
     'frame': true,
     'icon': path.join(__dirname, 'icon.png')
   });
   mainWindow.setMenuBarVisibility(false);
   // and load the URL of the app
-  mainWindow.loadURL("https://www.extinction-minijeux.fr/executable.html");
+  mainWindow.loadURL("https://www.extinction-minijeux.fr/executable_discord.html");
   mainWindow.webContents.on('did-finish-load', () => {
     setMainMenu(mainWindow); // Load the menu with mainWindow
   });
@@ -49,7 +48,34 @@ function setMainMenu(mainWindow) {
             let code = `document.getElementById('jeu').classList.remove('full')`;
             mainWindow.webContents.executeJavaScript(code);
           }
+        },
+        {
+          role: 'quit',
+          type: 'normal',
+          label: 'Quitter',
+        },
+        {
+          type: 'normal',
+          label: 'Vider le cache',
+          click() {
+            mainWindow.webContents.session.clearCache().then(() => {
+              console.log('Cache has been cleared');
+              mainWindow.webContents.reloadIgnoringCache();
+            });
+          }
         }
+      ]
+    },
+    {
+      label: "Edition",
+      submenu: [
+        {label: "Annuler", accelerator: "CmdOrCtrl+Z", selector: "undo:"},
+        {label: "Refaire", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:"},
+        {type: "separator"},
+        {label: "Couper", accelerator: "CmdOrCtrl+X", selector: "cut:"},
+        {label: "Copier", accelerator: "CmdOrCtrl+C", selector: "copy:"},
+        {label: "Coller", accelerator: "CmdOrCtrl+V", selector: "paste:"},
+        {label: "Sélectionner tout", accelerator: "CmdOrCtrl+A", selector: "selectAll:"}
       ]
     }
   ];

@@ -4,6 +4,10 @@
   "version": "1.0.1",
   "description": "Extinction-MiniJeux.fr",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/extinction-minijeux/extinction-package.git"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
